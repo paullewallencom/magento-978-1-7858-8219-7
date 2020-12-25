@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <action method="setLogoFile">
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="footer">
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer_links_account" after="footer_links">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">footer links</argument>
+                </arguments>
+                <block class="Magento\Framework\View\Element\Html\Link\Current" name="my-account-link">
+                    <arguments>
+                        <argument name="label" xsi:type="string">My account</argument>
+                        <argument name="path" xsi:type="string">customer/account</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Html\Link\Current" name="my-cart-link">
+                    <arguments>
+                        <argument name="label" xsi:type="string">My cart</argument>
+                        <argument name="path" xsi:type="string">checkout/cart</argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

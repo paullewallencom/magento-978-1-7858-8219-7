@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget 
+        id="category_product_slider"
+        class="Packt\ProductSlider\Block\Catalog\Product\ProductSlider"
+        is_email_compatible="false"
+        placeholder_image="Magento_Widget::placeholder.gif">
+        <label translate="true">Category product slider</label>
+        <description translate="true">List of Products for a given category in a slider widget</description>
+        <parameters>
+            <parameter name="title" xsi:type="text" required="true" visible="true">
+                <label translate="true">Title (frontend)</label>
+            </parameter>
+            <parameter name="category_id" xsi:type="block" visible="true" required="true">
+                <label translate="true">Category</label>
+                <block class="Packt\ProductSlider\Block\Adminhtml\Catalog\Category\Widget\Chooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Select Category...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="template" xsi:type="select" required="true" visible="true">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="default" value="product/slider/list.phtml" selected="true">
+                        <label translate="true">Product list slider</label>
+                    </option>
+                    <option name="teaser" value="product/slider/teaser.phtml">
+                        <label translate="true">Product teaser slider</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

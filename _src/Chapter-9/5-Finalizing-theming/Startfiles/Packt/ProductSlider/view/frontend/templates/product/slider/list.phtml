@@ -1,0 +1,15 @@
+<?php $productCollection = $block->getLoadedProductCollection() ?>
+<div class="block block-product-slider slider-list">
+    <div class="block-title">
+        <h2>List</h2>
+    </div>
+    <div class="block-content">
+        <?php if (count($productCollection)): ?>
+            <ul>
+                <?php foreach ($productCollection as $product): ?>
+                    <li><?php echo $product->getName() ?></li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
+    </div>
+</div>

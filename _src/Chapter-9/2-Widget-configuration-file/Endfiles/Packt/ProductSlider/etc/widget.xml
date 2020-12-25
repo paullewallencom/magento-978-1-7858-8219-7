@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget 
+        id="category_product_slider"
+        class="Magento\Catalog\Block\Product\List"
+        is_email_compatible="false"
+        placeholder_image="Magento_Widget::placeholder.gif">
+        <label translate="true">Category product slider</label>
+        <description translate="true">List of Products for a given category in a slider widget</description>
+        <parameters>
+            <parameter name="title" xsi:type="text" required="true" visible="true">
+                <label translate="true">Title (frontend)</label>
+            </parameter>
+            <parameter name="category_id" xsi:type="text" required="true" visible="true">
+                <label translate="true">Category ID</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

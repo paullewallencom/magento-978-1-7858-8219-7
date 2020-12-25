@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add 
+            id="Packt_HelloWorld::helloworld" 
+            title="HelloWorld" 
+            module="Packt_HelloWorld" 
+            sortOrder="50" 
+            parent="Magento_Backend::marketing" 
+            resource="Packt_HelloWorld::helloworld"
+        />
+        <add 
+            id="Packt_HelloWorld::index" 
+            title="Helloworld Index" 
+            module="Packt_HelloWorld" 
+            sortOrder="55" 
+            parent="Packt_HelloWorld::helloworld" 
+            action="helloworld/index/" 
+            resource="Packt_HelloWorld::index"
+        />
+    </menu>
+</config>
